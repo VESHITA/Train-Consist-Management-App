@@ -8,14 +8,32 @@ public class TrainConsistManagementApp {
         // Welcome message
         System.out.println("=== Train Consist Management App ===");
 
-        // Initialize an empty list (dynamic collection) to store bogies
-        List<String> trainConsist = new ArrayList<>();
+        // Create ArrayList for passenger bogies
+        List<String> passengerBogies = new ArrayList<>();
 
-        // Display initial bogie count
-        System.out.println("Train consist initialized.");
-        System.out.println("Initial bogie count: " + trainConsist.size());
+        // Add bogies (CREATE operation)
+        passengerBogies.add("Sleeper");
+        passengerBogies.add("AC Chair");
+        passengerBogies.add("First Class");
 
-        // Program continues...
-        System.out.println("System ready for further operations.");
+        // Display bogies after insertion (READ)
+        System.out.println("\nBogies after addition:");
+        System.out.println(passengerBogies);
+
+        // Remove a bogie (DELETE)
+        passengerBogies.remove("AC Chair");
+        System.out.println("\nAfter removing 'AC Chair':");
+        System.out.println(passengerBogies);
+
+        // Check existence (SEARCH)
+        boolean exists = passengerBogies.contains("Sleeper");
+        System.out.println("\nDoes 'Sleeper' exist? " + exists);
+
+        // Final list state
+        System.out.println("\nFinal bogie list:");
+        System.out.println(passengerBogies);
+
+        // Program continues
+        System.out.println("\nSystem ready for further operations.");
     }
 }
